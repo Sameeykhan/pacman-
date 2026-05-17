@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", sans-serif;
+  
+  --color-primary-container: #eaea00;
+  --color-secondary-container: #0743ff;
+  --color-surface: #131313;
+  --color-on-surface: #e2e2e2;
+  --color-on-surface-variant: #cac8aa;
+  --color-outline: #939277;
+}
+
+:root {
+  --background: #131313;
+  --foreground: #e2e2e2;
+  --primary: #eaea00;
+  --secondary: #0743ff;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  margin: 0;
+  overflow: hidden;
+}
+
+.scanlines {
+    background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0),
+        rgba(255,255,255,0) 50%,
+        rgba(0,0,0,0.2) 50%,
+        rgba(0,0,0,0.2)
+    );
+    background-size: 100% 4px;
+    pointer-events: none;
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    opacity: 0.05;
+}
+
+.neon-glow-blue {
+    box-shadow: 0 0 15px rgba(7, 67, 255, 0.8), inset 0 0 15px rgba(7, 67, 255, 0.8);
+}
+
+.neon-text-yellow {
+    text-shadow: 0 0 8px rgba(234, 234, 0, 0.6);
+}

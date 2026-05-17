@@ -1,0 +1,38 @@
+{
+  "entities": {
+    "Score": {
+      "title": "Score",
+      "description": "A high score entry on the leaderboard",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "userName": { "type": "string" },
+        "score": { "type": "number" },
+        "timestamp": { "type": "string", "format": "date-time" }
+      },
+      "required": ["userId", "score", "timestamp"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "User specific data",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "displayName": { "type": "string" },
+        "highScore": { "type": "number" },
+        "gamesPlayed": { "type": "number" }
+      },
+      "required": ["userId"]
+    }
+  },
+  "firestore": {
+    "/leaderboard/{scoreId}": {
+      "schema": "Score",
+      "description": "Global leaderboard entries"
+    },
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profiles and stats"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "Electric Arcade: Pac-Man",
+  "description": "A high-fidelity retro arcade experience featuring a functional backend for high scores and competitive gameplay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
